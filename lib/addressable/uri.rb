@@ -2432,7 +2432,7 @@ module Addressable
       end
       unreserved = CharacterClasses::UNRESERVED
       sub_delims = CharacterClasses::SUB_DELIMS
-      if !self.host.nil? && (self.host =~ /[<>{}\/\\\?\#\@"[[:space:]]]/ ||
+      if !self.host.nil? && (self.host =~ /[<>{}\/\\\?\#"[[:space:]]]/ ||
           (self.host[/^\[(.*)\]$/, 1] != nil && self.host[/^\[(.*)\]$/, 1] !~
           Regexp.new("^[#{unreserved}#{sub_delims}:]*$")))
         raise InvalidURIError, "Invalid character in host: '#{self.host.to_s}'"
