@@ -1375,7 +1375,6 @@ module Addressable
       end
 
       @port = new_port.to_s.to_i
-      @port = nil if @port == 0
 
       # Reset dependent values
       remove_instance_variable(:@authority) if defined?(@authority)

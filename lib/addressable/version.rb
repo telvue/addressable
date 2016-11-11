@@ -22,7 +22,7 @@ if !defined?(Addressable::VERSION)
     module VERSION
       MAJOR = 2
       MINOR = 5
-      TINY  = '0-telvue.1'
+      TINY  = '0-telvue.2'
 
       STRING = [MAJOR, MINOR, TINY].join('.')
     end
